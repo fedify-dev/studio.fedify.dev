@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-24">
     <!-- Background gradient -->
     <div
       class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-fuchsia-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 transition-colors duration-500"
