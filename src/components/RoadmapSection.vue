@@ -76,7 +76,7 @@ const phases = [
       <!-- Timeline -->
       <div class="relative">
         <!-- Vertical line -->
-        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sky-500 via-violet-500 to-amber-500 md:-translate-x-1/2" />
+        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sky-500 via-violet-500 to-amber-500" />
 
         <!-- Phase items -->
         <div class="space-y-12">
@@ -87,7 +87,7 @@ const phases = [
           >
             <!-- Timeline node -->
             <div
-              class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-slate-900 md:-translate-x-1/2 z-10"
+              class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-slate-900 -translate-x-[7px] md:-translate-x-1/2 z-10"
               :class="{
                 'bg-sky-500': item.color === 'sky',
                 'bg-violet-500': item.color === 'violet',
@@ -153,7 +153,7 @@ const phases = [
         </div>
 
         <!-- End marker -->
-        <div class="absolute left-4 md:left-1/2 -bottom-4 w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-pink-500 md:-translate-x-1/2 flex items-center justify-center">
+        <div class="absolute left-4 md:left-1/2 -bottom-4 w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-pink-500 -translate-x-[15px] md:-translate-x-1/2 flex items-center justify-center">
           <div class="i-lucide-rocket w-4 h-4 text-white" />
         </div>
       </div>
