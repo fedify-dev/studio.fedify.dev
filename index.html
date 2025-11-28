@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/fedify-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fedify Studio - The Definitive ActivityPub Development Platform</title>
+    <meta name="description" content="Fedify Studio is a comprehensive web-based development and debugging platform for ActivityPub. Coming H2 2026." />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fedify Studio - ActivityPub Development Platform" />
+    <meta property="og:description" content="The definitive development companion for ActivityPub. Real-time monitoring, debugging tools, and interactive testing." />
+    <meta property="og:image" content="/fedify-logo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fedify Studio" />
+    <meta name="twitter:description" content="The definitive development companion for ActivityPub. Coming H2 2026." />
+
+    <!-- Dark mode detection -->
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
