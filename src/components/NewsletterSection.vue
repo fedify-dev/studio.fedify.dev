@@ -1,21 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const email = ref('')
-const isSubmitted = ref(false)
-const isSubmitting = ref(false)
-
-const handleSubmit = async () => {
-  if (!email.value || isSubmitting.value) return
-
-  isSubmitting.value = true
-
-  // Simulate API call delay
-  await new Promise(resolve => setTimeout(resolve, 800))
-
-  isSubmitted.value = true
-  isSubmitting.value = false
-}
 </script>
 
 <template>
@@ -47,14 +30,19 @@ const handleSubmit = async () => {
       </p>
 
       <!-- Form -->
-      <div v-if="!isSubmitted" class="max-w-md mx-auto">
-        <form @submit.prevent="handleSubmit" class="relative">
+      <div class="max-w-md mx-auto">
+        <form
+          action="https://buttondown.com/api/emails/fedify-studio"
+          method="post"
+          target="_blank"
+          class="relative"
+        >
           <div class="flex flex-col sm:flex-row gap-3">
             <div class="relative flex-1">
               <div class="absolute left-4 top-1/2 -translate-y-1/2 i-lucide-mail w-5 h-5 text-slate-500" />
               <input
-                v-model="email"
                 type="email"
+                name="email"
                 required
                 placeholder="you@example.com"
                 class="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-fedify-blue focus:ring-2 focus:ring-fedify-blue/20 transition-all duration-300"
@@ -62,31 +50,15 @@ const handleSubmit = async () => {
             </div>
             <button
               type="submit"
-              :disabled="isSubmitting"
-              class="px-8 py-4 rounded-xl bg-gradient-to-r from-fedify-blue to-fedify-violet text-white font-semibold hover:shadow-lg hover:shadow-fedify-blue/30 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-fedify-blue to-fedify-violet text-white font-semibold hover:shadow-lg hover:shadow-fedify-blue/30 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <span v-if="!isSubmitting">Notify me</span>
-              <span v-else class="flex items-center gap-2">
-                <div class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                <span>Subscribing...</span>
-              </span>
+              Notify me
             </button>
           </div>
         </form>
         <p class="mt-4 text-sm text-slate-500">
           We respect your privacy. Unsubscribe at any time.
         </p>
-      </div>
-
-      <!-- Success state -->
-      <div v-else class="max-w-md mx-auto">
-        <div class="p-8 rounded-2xl bg-emerald-500/20 border border-emerald-500/30">
-          <div class="i-lucide-check-circle w-12 h-12 mx-auto text-emerald-400 mb-4" />
-          <h3 class="text-xl font-semibold text-white mb-2">You're on the list!</h3>
-          <p class="text-slate-400">
-            Thanks for your interest in Fedify Studio. We'll let you know as soon as it's ready.
-          </p>
-        </div>
       </div>
 
       <!-- Social proof -->
