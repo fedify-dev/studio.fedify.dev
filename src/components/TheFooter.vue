@@ -89,22 +89,10 @@ const links = {
       </div>
 
       <!-- Bottom bar -->
-      <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-slate-500">
+      <div class="mt-12 pt-8 border-t border-slate-800">
+        <p class="text-sm text-slate-500 text-center">
           &copy; {{ currentYear }} Fedify. All rights reserved.
         </p>
-        <div class="flex items-center gap-2 text-sm text-slate-500">
-          <span>Supported by</span>
-          <a
-            href="https://www.sovereigntechfund.de/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-fedify-sky hover:text-fedify-blue transition-colors inline-flex items-center gap-1"
-          >
-            Sovereign Tech Fund
-            <div class="i-lucide-external-link w-3 h-3" />
-          </a>
-        </div>
       </div>
     </div>
   </footer>
