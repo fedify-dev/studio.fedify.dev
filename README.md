@@ -54,6 +54,10 @@ src/
 - **Smooth Animations**: CSS animations with staggered delays
 - **Accessible**: Semantic HTML, ARIA labels, keyboard navigation
 
+## Deployment
+
+The site is automatically deployed to [studio.fedify.dev](https://studio.fedify.dev/) via GitHub Actions when changes are pushed to the `main` branch.
+
 ## Related Links
 
 - [Fedify Framework](https://fedify.dev/)

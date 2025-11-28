@@ -63,8 +63,15 @@ All section components are in `src/components/`:
 - **Style**: Clean, professional, subtle gradients, not overly flashy
 - **Responsive**: Mobile-first, breakpoints at sm/md/lg
 
+## Deployment
+
+- Site is deployed to GitHub Pages at https://studio.fedify.dev/
+- Deployment is automated via GitHub Actions (`.github/workflows/build.yaml`)
+- Pushes to `main` branch trigger automatic build and deploy
+- Custom domain configured via `public/CNAME`
+
 ## Notes
 
-- Newsletter form is frontend-only (no backend integration yet)
+- Newsletter form integrates with Buttondown (https://buttondown.com/fedify-studio)
 - The `WHITEPAPER.md` file contains detailed feature specifications
 - Logo files are in both root directory and `public/` folder
