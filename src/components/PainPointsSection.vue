@@ -61,7 +61,7 @@ const painPoints = [
         <div
           v-for="(point, index) in painPoints"
           :key="point.title"
-          class="group relative p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300 hover:shadow-lg"
+          class="group relative p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300 hover:shadow-lg overflow-hidden"
           :style="{ animationDelay: `${index * 100}ms` }"
         >
           <!-- Icon -->
@@ -82,7 +82,7 @@ const painPoints = [
 
           <!-- Hover accent -->
           <div
-            class="absolute inset-x-0 bottom-0 h-1 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r"
+            class="absolute inset-x-0 bottom-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r"
             :class="{
               'from-red-500 to-orange-500': index === 0,
               'from-orange-500 to-amber-500': index === 1,
