@@ -32,7 +32,7 @@
       <!-- Form -->
       <div class="max-w-md mx-auto">
         <form
-          action="https://buttondown.com/api/emails/fedify-studio"
+          action="https://buttondown.com/api/emails/embed-subscribe/fedify-studio"
           method="post"
           target="_blank"
           class="relative"
